@@ -1,9 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 
-const router = express.Router();
-
-
 const app = express();
 app.use(cors());
 
@@ -36,6 +33,8 @@ app.use('/api', (req, res) => {
 ])
 })
 
-app.listen( 3000, () => {
+const port = 3030
+
+app.listen( process.env.PORT || port, () => {
   console.log(`servidor corriendo en http://localhost:3000`)
 })
