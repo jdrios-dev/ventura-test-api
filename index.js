@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-app.use('/api', (req, res) => {
+app.use('/', (req, res) => {
   res.send([
     {
       id: '001',
@@ -36,5 +36,5 @@ app.use('/api', (req, res) => {
 const port = 3030
 
 app.listen( process.env.PORT || port, () => {
-  console.log(`servidor corriendo en http://localhost:3000`)
+  console.log(`servidor corriendo`)
 })
